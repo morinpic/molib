@@ -1,2 +1,4 @@
-my_lib
+molib
 ======
+
+my library
