@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+
+    <title>Carousel | MORI JS Library</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/github.css" rel="stylesheet">
+</head>
+
+<body>
+<section class="container">
+    <h1 class="siteTitle">Carousel</h1>
+
+    <div class="content">
+        <!-- Nomal -->
+        <section class="case">
+            <h1 class="hl">normal</h1>
+            <div id="jsCarouselId01">
+                <div class="viewPort">
+                    <div class="innerContents">
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img1" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img2" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img3" width="300" height="200"></div>
+                    </div>
+                </div>
+                <p class="controls">
+                    <button id="prev01" class="prev">prev</button>
+                    <button id="next01" class="next">next</button>
+                </p>
+            </div>
+            <div class="explanation">
+                <script src="https://gist.github.com/morinpic/11135867.js"></script>
+                <script src="https://gist.github.com/morinpic/11135979.js"></script>
+            </div>  
+        </section>
+
+        <!--Loop -->
+        <section class="case">
+            <h1 class="hl">loop</h1>
+            <div id="jsCarouselId02">
+                <div class="viewPort">
+                    <div class="innerContents">
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img1" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img2" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img3" width="300" height="200"></div>
+                    </div>
+                </div>
+                <p class="controls">
+                    <button id="prev02" class="prev">prev</button>
+                    <button id="next02" class="next">next</button>
+                </p>
+            </div>
+            <div class="explanation">
+                <script src="https://gist.github.com/morinpic/11136022.js"></script>
+                <script src="https://gist.github.com/morinpic/11136096.js"></script>
+            </div>  
+        </section>
+
+        <!-- Auto Change -->
+        <section class="case">
+            <h1 class="hl">Auto Change</h1>
+            <div id="jsCarouselId03">
+                <div class="viewPort">
+                    <div class="innerContents">
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img1" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img2" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img3" width="300" height="200"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="explanation">
+                <script src="https://gist.github.com/morinpic/11136114.js"></script>
+                <script src="https://gist.github.com/morinpic/11136126.js"></script>
+            </div>  
+        </section>
+
+        <!-- Lamp -->
+        <section class="case">
+            <h1 class="hl">Lamp</h1>
+            <div id="jsCarouselId04">
+                <div class="viewPort">
+                    <div class="innerContents">
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img1" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img2" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img3" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img4" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img5" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img6" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img7" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img8" width="300" height="200"></div>
+                        <div class="item"><img src="http://placehold.jp/300x200.png?text=img9" width="300" height="200"></div>
+                    </div>
+                </div>
+                <div id="lampId04" class="lamp"></div>
+                <p class="controls">
+                    <button id="prev04" class="prev">prev</button>
+                    <button id="next04" class="next">next</button>
+                </p>
+            </div>
+            <div class="explanation">
+                <script src="https://gist.github.com/morinpic/11136139.js"></script>
+                <script src="https://gist.github.com/morinpic/11136153.js"></script>
+            </div>  
+        </section>
+    </div>
+</section>
+
+<style>
+    .viewPort {
+        width: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+    .item {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+        float: left;
+    }
+    .innerContents {
+        display: block;
+    }
+    .innerContents:after {
+        content: '';
+        clear: both;
+        height: 0;
+        display: block;
+    }
+    .lamp {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .lamp>div {
+        cursor: pointer;
+        background-color: #aab4be;
+        display: inline-block;
+        width: 14px;
+        height: 5px;
+        margin: 0 4px;
+    }
+    .lamp>div.current {
+        background-color: #3085d6;
+    }
+    .controls {
+        text-align: center;
+        margin: 0 0 15px 0;
+    }
+    .viewPortLayout01 {
+        width: 380px;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+    .innerContentsLayout01 {
+        padding-left: 30px
+    }
+    .innerContentsLayout01:after {
+        content: '';
+        clear: both;
+        height: 0;
+        display: block;
+    }
+    .innerContentsLayout01 .item{
+        margin: 0 10px;
+    }
+</style>
+
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/molib.js"></script>
+<script>
+    //normal
+    new MOLIB.carousel({
+        targetId: '#jsCarouselId01',
+        contents: '.innerContents',
+        btn: {
+            prev: '#prev01',
+            next: '#next01'
+        }
+    });
+
+    //loop
+    new MOLIB.carousel({
+        targetId: '#jsCarouselId02',
+        contents: '.innerContents',
+        loop: true,
+        btn: {
+            prev: '#prev02',
+            next: '#next02'
+        }
+    });
+
+    //Auto Change
+    new MOLIB.carousel({
+        targetId: '#jsCarouselId03',
+        contents: '.innerContents',
+        loop: true,
+        autoChange: true,
+        autoTimer: 2000
+    });
+
+    //Lamp
+    new MOLIB.carousel({
+        targetId: '#jsCarouselId04',
+        contents: '.innerContents',
+        lamp: '#lampId04',
+        btn: {
+            prev: '#prev04',
+            next: '#next04'
+        }
+    });
+</script>
+</body>
+</html>
